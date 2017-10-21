@@ -10,26 +10,18 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class ModBlocks {
 
-    public static BlockSaltOre oreSalt;
-    public static BlockSaltOre oreNetherSalt;
-    public static BlockCropHypnoFlower cropHypnoFlower;
-    public static BlockActivatedHypnoFlower activatedHypnoFlower;
-    public static BlockTransparent blockSalt;
-
-    public static void init() {
-        oreSalt = register(new BlockSaltOre("oreSalt", "oreSalt").setCreativeTab(HellsKitchen.creativeTab));
-        oreNetherSalt = register(new BlockSaltOre("oreNetherSalt", "oreSalt").setCreativeTab(HellsKitchen.creativeTab));
-        cropHypnoFlower = register(new BlockCropHypnoFlower(), null);
-        activatedHypnoFlower = register(new BlockActivatedHypnoFlower().setCreativeTab(HellsKitchen.creativeTab));
-        blockSalt = register(new BlockTransparent(Material.GLASS, "blockSalt").setCreativeTab(HellsKitchen.creativeTab));
-    }
+    public static BlockSaltOre oreSalt = new BlockSaltOre("oreSalt", "oreSalt").setCreativeTab(HellsKitchen.creativeTab);
+    public static BlockSaltOre oreNetherSalt = new BlockSaltOre("oreNetherSalt", "oreSalt").setCreativeTab(HellsKitchen.creativeTab);
+    public static BlockCropHypnoFlower cropHypnoFlower = new BlockCropHypnoFlower();
+    public static BlockActivatedHypnoFlower activatedHypnoFlower = new BlockActivatedHypnoFlower().setCreativeTab(HellsKitchen.creativeTab);
+    public static BlockTransparent blockSalt = new BlockTransparent(Material.GLASS, "blockSalt").setCreativeTab(HellsKitchen.creativeTab);
 
     public static void register(IForgeRegistry<Block> registry) {
         registry.registerAll(
-                oreSalt
-                oreNetherSalt
-                cropHypnoFlower
-                activatedHypnoFlower
+                oreSalt,
+                oreNetherSalt,
+                cropHypnoFlower,
+                activatedHypnoFlower,
                 blockSalt
         );
         //GameRegistry.registerTileEntity(stoneworks.getTileEntityClass(), stoneworks.getRegistryName().toString());
@@ -37,11 +29,12 @@ public class ModBlocks {
 
     public static void registerItemBlocks(IForgeRegistry<Item> registry) {
         registry.registerAll(
-                oreSalt.createItemBlock();
-                oreNetherSalt.createItemBlock();
-                activatedHypnoFlower.createItemBlock();
-                blockSalt.createItemBlock();
+                oreSalt.createItemBlock(),
+                oreNetherSalt.createItemBlock(),
+                activatedHypnoFlower.createItemBlock(),
+                blockSalt.createItemBlock()
         );
+
     }
 
     public static void registerModels() {

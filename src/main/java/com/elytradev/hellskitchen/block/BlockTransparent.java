@@ -7,6 +7,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -25,7 +26,6 @@ public class BlockTransparent extends Block {
         setRegistryName(name);
     }
 
-    @Override
     public void registerItemModel(Item item) {
         HellsKitchen.proxy.registerItemRenderer(item, 0, name);
     }
@@ -34,6 +34,10 @@ public class BlockTransparent extends Block {
     public BlockTransparent setCreativeTab(CreativeTabs tab) {
         super.setCreativeTab(tab);
         return this;
+    }
+
+    public Item createItemBlock() {
+        return new ItemBlock(this).setRegistryName(getRegistryName());
     }
 
     @Override

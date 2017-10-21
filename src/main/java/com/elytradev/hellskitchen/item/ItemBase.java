@@ -13,9 +13,8 @@ public class ItemBase extends Item {
         setRegistryName(name);
     }
 
-    @Override
-    public void registerItemModel(Item item) {
-        HellsKitchen.proxy.registerItemRenderer(item, 0, name);
+    public void registerItemModel() {
+        HellsKitchen.proxy.registerItemRenderer(this, 0, name);
     }
 
     @Override

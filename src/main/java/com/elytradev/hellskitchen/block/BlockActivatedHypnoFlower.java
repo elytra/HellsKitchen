@@ -35,7 +35,6 @@ public class BlockActivatedHypnoFlower extends BlockBase {
     }
 
     @Nullable
-    @Override
     public AxisAlignedBB getCollisionBoundingBox(IBlockState state, World world, BlockPos pos) {
         return NULL_AABB;
     }

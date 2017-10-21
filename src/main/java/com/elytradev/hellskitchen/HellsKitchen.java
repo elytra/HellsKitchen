@@ -45,7 +45,7 @@ public class HellsKitchen {
      */
     @Mod.EventHandler
     public void preinit(FMLPreInitializationEvent event) {
-        System.out.println(MOD_NAME + "is loading!");
+        System.out.println(MOD_NAME + " is loading!");
         GameRegistry.registerWorldGenerator(new WorldGen(), 3);
     }
 
@@ -97,7 +97,7 @@ public class HellsKitchen {
          * Listen for the register event for creating custom items
          */
         @SubscribeEvent
-        public static void addItems(RegistryEvent.Register<Item> event) {
+        public static void registerItems(RegistryEvent.Register<Item> event) {
             ModItems.register(event.getRegistry());
             ModBlocks.registerItemBlocks(event.getRegistry());
         }
@@ -106,7 +106,7 @@ public class HellsKitchen {
          * Listen for the register event for creating custom blocks
          */
         @SubscribeEvent
-        public static void addBlocks(RegistryEvent.Register<Block> event) {
+        public static void registerBlocks(RegistryEvent.Register<Block> event) {
             ModBlocks.register(event.getRegistry());
         }
 

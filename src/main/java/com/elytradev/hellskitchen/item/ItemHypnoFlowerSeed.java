@@ -16,9 +16,8 @@ public class ItemHypnoFlowerSeed extends ItemSeeds {
         setRegistryName("hypnoFlowerSeed");
     }
 
-    @Override
-    public void registerItemModel(Item item) {
-        HellsKitchen.proxy.registerItemRenderer(item, 0, "hypnoFlowerSeed");
+    public void registerItemModel() {
+        HellsKitchen.proxy.registerItemRenderer(this, 0, "hypnoFlowerSeed");
     }
 
     @Override

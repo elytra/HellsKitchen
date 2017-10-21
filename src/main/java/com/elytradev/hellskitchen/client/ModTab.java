@@ -1,9 +1,9 @@
 package com.elytradev.hellskitchen.client;
 
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import com.elytradev.hellskitchen.HellsKitchen;
 import com.elytradev.hellskitchen.item.ModItems;
+import net.minecraft.item.ItemStack;
+import net.minecraft.creativetab.CreativeTabs;
 
 public class ModTab extends CreativeTabs {
     public ModTab() {
@@ -12,7 +12,7 @@ public class ModTab extends CreativeTabs {
     }
 
     @Override
-    public Item getTabIconItem() {
-        return ModItems.salt;
+    public ItemStack getTabIconItem() {
+        return new ItemStack(ModItems.salt);
     }
 }
