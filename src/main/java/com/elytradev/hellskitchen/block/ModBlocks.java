@@ -10,11 +10,11 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class ModBlocks {
 
-    public static BlockSaltOre oreSalt = new BlockSaltOre("oreSalt", "oreSalt").setCreativeTab(HellsKitchen.creativeTab);
-    public static BlockSaltOre oreNetherSalt = new BlockSaltOre("oreNetherSalt", "oreSalt").setCreativeTab(HellsKitchen.creativeTab);
+    public static BlockSaltOre oreSalt = new BlockSaltOre("oresalt", "oreSalt").setCreativeTab(HellsKitchen.creativeTab);
+    public static BlockSaltOre oreNetherSalt = new BlockSaltOre("orenethersalt", "oreSalt").setCreativeTab(HellsKitchen.creativeTab);
     public static BlockCropHypnoFlower cropHypnoFlower = new BlockCropHypnoFlower();
     public static BlockActivatedHypnoFlower activatedHypnoFlower = new BlockActivatedHypnoFlower().setCreativeTab(HellsKitchen.creativeTab);
-    public static BlockTransparent blockSalt = new BlockTransparent(Material.GLASS, "blockSalt").setCreativeTab(HellsKitchen.creativeTab);
+    public static BlockTransparent blockSalt = new BlockTransparent(Material.GLASS, "blocksalt").setCreativeTab(HellsKitchen.creativeTab);
 
     public static void register(IForgeRegistry<Block> registry) {
         registry.registerAll(
