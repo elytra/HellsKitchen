@@ -4,10 +4,10 @@ out/
 build/
 bin/
 
-.idea/*.*
+.idea/
 .settings/
 .gradle/
-.gradle/*.*
+.gradle/
 .ssh/
 
 *.iml
