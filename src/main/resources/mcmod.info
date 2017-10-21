@@ -1,0 +1,21 @@
+[
+  {
+    "modid": "hellskitchen",
+    "name": "Hell's Kitchen",
+    "description": "Nether-based food-adjacent mod for Minecraft 1.12",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "b0undarybreaker",
+      "deli73"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": [
+      ""
+    ]
+  }
+]
