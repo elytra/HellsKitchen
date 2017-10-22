@@ -4,7 +4,7 @@
 
 [>> Downloads <<](https://github.com/elytra/hellskitchen/releases)
 
-*Adding just the right spice*
+*Adding just the right spice for the job*
 
 **This mod is open source and under a permissive license.** All Elytra mods are,
 and as such, can be included in any modpack on any platform without prior
