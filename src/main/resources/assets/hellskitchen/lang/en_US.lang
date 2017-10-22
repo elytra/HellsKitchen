@@ -1,7 +1,7 @@
 # items
 item.salt.name=Salt Crystals
-item.hypnoflower.name=Phermonic Flower Bulb
-item.hypnoflowerseed.name=Phermonic Grass
+item.hypnoflower.name=Phermonic Flower
+item.hypnoFlowerSeed.name=Sweet-Smelling Bulb
 item.deepsalt.name=Deep Salt
 item.phermonicdust.name=Phermonic Dust
 
@@ -9,6 +9,6 @@ item.phermonicdust.name=Phermonic Dust
 tile.oresalt.name=Salt Ore
 tile.orenethersalt.name=Nether Salt Ore
 tile.blocksalt.name=Salt Block
-tile.activatedhypnoflower.name=Intensified Phermonic Flower
+tile.activatedHypnoFlower.name=Intensified Phermonic Flower
 
 itemGroup.hellskitchen=Hell's Kitchen

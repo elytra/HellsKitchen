@@ -19,7 +19,7 @@ public class ItemBase extends Item {
 
     @Override
     public ItemBase setCreativeTab(CreativeTabs tab) {
-        super.setCreativeTab(tab);
+        super.setCreativeTab(HellsKitchen.creativeTab);
         return this;
     }
 }

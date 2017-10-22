@@ -3,6 +3,7 @@ build/tmp/
 out/
 build/
 bin/
+classes/
 
 .idea/
 .settings/
@@ -15,4 +16,6 @@ bin/
 *.lock
 .classpath
 .project
+*.jar
+!gradle-wrapper.jar
 
