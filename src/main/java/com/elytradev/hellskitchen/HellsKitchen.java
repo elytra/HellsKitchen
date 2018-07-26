@@ -1,14 +1,11 @@
 package com.elytradev.hellskitchen;
 
 import com.elytradev.hellskitchen.block.ModBlocks;
-import com.elytradev.hellskitchen.client.ModTab;
+import com.elytradev.hellskitchen.client.HellsKitchenTab;
 import com.elytradev.hellskitchen.item.ModItems;
 import com.elytradev.hellskitchen.proxy.CommonProxy;
-import com.elytradev.hellskitchen.world.WorldGen;
 import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.world.World;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -17,12 +14,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.network.IGuiHandler;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.event.RegistryEvent;
-
-import javax.annotation.Nullable;
 
 @Mod(
         modid = HellsKitchen.modId,
@@ -35,7 +27,7 @@ public class HellsKitchen {
     public static final String name = "Hell's Kitchen";
     public static final String version = "@VERSION@";
 
-    public static final ModTab creativeTab = new ModTab();
+    public static final HellsKitchenTab creativeTab = new HellsKitchenTab();
 
     @SidedProxy(serverSide = "com.elytradev.hellskitchen.proxy.CommonProxy", clientSide = "com.elytradev.hellskitchen.proxy.ClientProxy")
     public static CommonProxy proxy;
