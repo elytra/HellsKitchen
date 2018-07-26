@@ -37,7 +37,7 @@ public class BlockSaltOre extends BlockBase implements ItemOreDict {
 
     @Override
     public Item getItemDropped(IBlockState state, Random random, int fortune) {
-        return ModItems.salt;
+        return ModItems.SALT;
     }
 
     @Override

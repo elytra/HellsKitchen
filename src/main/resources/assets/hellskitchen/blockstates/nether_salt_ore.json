@@ -2,7 +2,7 @@
     "forge_marker": 1,
     "defaults": {
         "textures": {
-            "all": "hellskitchen:blocks/blocksalt"
+            "all": "hellskitchen:blocks/nether_salt_ore"
         }
     },
     "variants": {

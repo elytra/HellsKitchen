@@ -13,16 +13,16 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 
-public class BlockTransparent extends Block {
+public class BlockTransparent extends BlockBase {
 
     protected String name;
 
     public BlockTransparent(Material material, String name) {
-        super(material);
+        super(material, name);
         setSoundType(SoundType.GLASS);
         this.name = name;
 
-        setUnlocalizedName(name);
+        setTranslationKey(name);
         setRegistryName(name);
     }
 
@@ -48,7 +48,7 @@ public class BlockTransparent extends Block {
 
     @SideOnly(Side.CLIENT)
     @Override
-    public BlockRenderLayer getBlockLayer() {
+    public BlockRenderLayer getRenderLayer() {
         return BlockRenderLayer.TRANSLUCENT;
     }
 }

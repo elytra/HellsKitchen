@@ -6,8 +6,11 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import com.elytradev.hellskitchen.HellsKitchen;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockBase extends Block {
+public class BlockBase extends Block implements IBlockBase {
 
     protected String name;
 
@@ -16,7 +19,7 @@ public class BlockBase extends Block {
 
         this.name = name;
 
-        setUnlocalizedName(name);
+        setTranslationKey(name);
         setRegistryName(name);
     }
 

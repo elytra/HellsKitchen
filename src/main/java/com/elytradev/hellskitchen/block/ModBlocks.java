@@ -10,37 +10,32 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class ModBlocks {
 
-    public static BlockSaltOre oreSalt = new BlockSaltOre("oresalt", "oreSalt").setCreativeTab(HellsKitchen.creativeTab);
-    public static BlockSaltOre oreNetherSalt = new BlockSaltOre("orenethersalt", "oreSalt").setCreativeTab(HellsKitchen.creativeTab);
-    public static BlockCropHypnoFlower cropHypnoFlower = new BlockCropHypnoFlower();
-    public static BlockActivatedHypnoFlower activatedHypnoFlower = new BlockActivatedHypnoFlower().setCreativeTab(HellsKitchen.creativeTab);
-    public static BlockTransparent blockSalt = new BlockTransparent(Material.GLASS, "blocksalt").setCreativeTab(HellsKitchen.creativeTab);
+    public static BlockSaltOre ORE_SALT = new BlockSaltOre("salt_ore", "oreSalt").setCreativeTab(HellsKitchen.creativeTab);
+    public static BlockSaltOre ORE_NETHER_SALT = new BlockSaltOre("nether_salt_ore", "oreSalt").setCreativeTab(HellsKitchen.creativeTab);
+    public static BlockTransparent BLOCK_SALT = new BlockTransparent(Material.GLASS, "salt_block").setCreativeTab(HellsKitchen.creativeTab);
+
+    public static Block[] allBlocks = {
+        ORE_SALT, ORE_NETHER_SALT, BLOCK_SALT
+    };
 
     public static void register(IForgeRegistry<Block> registry) {
-        registry.registerAll(
-                oreSalt,
-                oreNetherSalt,
-                cropHypnoFlower,
-                activatedHypnoFlower,
-                blockSalt
-        );
+        for (Block block: allBlocks) {
+            registry.register(block);
+        }
         //GameRegistry.registerTileEntity(stoneworks.getTileEntityClass(), stoneworks.getRegistryName().toString());
     }
 
     public static void registerItemBlocks(IForgeRegistry<Item> registry) {
-        registry.registerAll(
-                oreSalt.createItemBlock(),
-                oreNetherSalt.createItemBlock(),
-                activatedHypnoFlower.createItemBlock(),
-                blockSalt.createItemBlock()
-        );
+        for (Block block: allBlocks) {
+            if (block instanceof IBlockBase) registry.register(((IBlockBase)block).createItemBlock());
+            else registry.register(new ItemBlock(block));
+        }
 
     }
 
     public static void registerModels() {
-        oreSalt.registerItemModel(Item.getItemFromBlock(oreSalt));
-        oreNetherSalt.registerItemModel(Item.getItemFromBlock(oreNetherSalt));
-        activatedHypnoFlower.registerItemModel(Item.getItemFromBlock(activatedHypnoFlower));
-        blockSalt.registerItemModel(Item.getItemFromBlock(blockSalt));
+        for (Block block: allBlocks) {
+            if (block instanceof IBlockBase) ((IBlockBase)block).registerItemModel(Item.getItemFromBlock(block));
+        }
     }
 }

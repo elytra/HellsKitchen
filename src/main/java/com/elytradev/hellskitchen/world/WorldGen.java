@@ -15,17 +15,17 @@ public class WorldGen implements IWorldGenerator{
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         if (world.provider.getDimension() == 0) { // the overworld
-            generateOverworld(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
+//            generateOverworld(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
         } else if (world.provider.getDimension() == -1) {
             generateNether(random, chunkX, chunkX, world, chunkGenerator, chunkProvider);
         }
     }
 
     private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-        generateOre(ModBlocks.oreSalt.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
+        generateOre(ModBlocks.ORE_SALT.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
     }
     private void generateNether(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-        generateOre(ModBlocks.oreNetherSalt.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 1, 128, 4 + random.nextInt(4), 24);
+        generateOre(ModBlocks.ORE_NETHER_SALT.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 1, 128, 4 + random.nextInt(4), 24);
     }
 
     private void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances) {
@@ -38,6 +38,5 @@ public class WorldGen implements IWorldGenerator{
             generator.generate(world, random, pos);
         }
     }
-
 
 }

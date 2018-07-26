@@ -13,6 +13,6 @@ public class ModTab extends CreativeTabs {
 
     @Override
     public ItemStack getTabIconItem() {
-        return new ItemStack(ModItems.salt);
+        return new ItemStack(ModItems.SALT);
     }
 }
