@@ -5,9 +5,9 @@ import com.elytradev.hellskitchen.item.ModItems;
 import net.minecraft.item.ItemStack;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class ModTab extends CreativeTabs {
-    public ModTab() {
-        super(HellsKitchen.MOD_ID);
+public class HellsKitchenTab extends CreativeTabs {
+    public HellsKitchenTab() {
+        super(HellsKitchen.modId);
         setBackgroundImageName("hellskitchen.png");
     }
 
