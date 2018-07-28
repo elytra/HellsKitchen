@@ -15,15 +15,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockTransparent extends BlockBase {
 
-    protected String name;
-
     public BlockTransparent(Material material, String name) {
         super(material, name);
         setSoundType(SoundType.GLASS);
-        this.name = name;
-
-        setTranslationKey(name);
-        setRegistryName(name);
     }
 
     public void registerItemModel(Item item) {

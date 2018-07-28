@@ -1,5 +1,14 @@
 # items
+item.salt.name=Salt Crystals
 
-#blocks
+# blocks
+tile.salt_ore.name=Salt Ore
+tile.nether_salt_ore.name=Nether Salt Ore
+tile.salt_block.name=Salt Block
 
+# tooltips
+
+# messages
+
+# misc
 itemGroup.hellskitchen=Hell's Kitchen

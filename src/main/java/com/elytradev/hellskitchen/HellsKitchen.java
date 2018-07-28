@@ -4,6 +4,7 @@ import com.elytradev.hellskitchen.block.ModBlocks;
 import com.elytradev.hellskitchen.client.HellsKitchenTab;
 import com.elytradev.hellskitchen.item.ModItems;
 import com.elytradev.hellskitchen.proxy.CommonProxy;
+import com.elytradev.hellskitchen.util.TeleportCommand;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -13,6 +14,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
@@ -41,6 +43,7 @@ public class HellsKitchen {
 
 //        MinecraftForge.EVENT_BUS.register(InRedRecipes.class);
         MinecraftForge.EVENT_BUS.register(proxy);
+        proxy.preInit(event);
 
 //        NetworkRegistry.INSTANCE.registerGuiHandler(this, new IGuiHandler() {
 //            public static final int OSCILLATOR = 0;
@@ -87,6 +90,11 @@ public class HellsKitchen {
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 
+    }
+
+    @Mod.EventHandler
+    public void serverLoad(FMLServerStartingEvent event) {
+        event.registerServerCommand(new TeleportCommand());
     }
 
     @Mod.EventBusSubscriber

@@ -2,7 +2,7 @@
     "forge_marker": 1,
     "defaults": {
         "textures": {
-            "all": "hellskitchen:blocks/salt-ore"
+            "all": "hellskitchen:blocks/salt_ore"
         }
     },
     "variants": {
