@@ -13,16 +13,17 @@ public class ModBlocks {
     public static BlockSaltOre ORE_SALT = new BlockSaltOre("salt_ore", "oreSalt").setCreativeTab(HellsKitchen.creativeTab);
     public static BlockSaltOre ORE_NETHER_SALT = new BlockSaltOre("nether_salt_ore", "oreSalt").setCreativeTab(HellsKitchen.creativeTab);
     public static BlockTransparent BLOCK_SALT = new BlockTransparent(Material.GLASS, "salt_block").setCreativeTab(HellsKitchen.creativeTab);
+    public static BlockVines HELL_VINES = new BlockVines();
 
     public static Block[] allBlocks = {
-        ORE_SALT, ORE_NETHER_SALT, BLOCK_SALT
+        ORE_SALT, ORE_NETHER_SALT, BLOCK_SALT, HELL_VINES
     };
 
     public static void register(IForgeRegistry<Block> registry) {
         for (Block block: allBlocks) {
             registry.register(block);
         }
-        //GameRegistry.registerTileEntity(stoneworks.getTileEntityClass(), stoneworks.getRegistryName().toString());
+        GameRegistry.registerTileEntity(HELL_VINES.getTileEntityClass(), HELL_VINES.getRegistryName().toString());
     }
 
     public static void registerItemBlocks(IForgeRegistry<Item> registry) {

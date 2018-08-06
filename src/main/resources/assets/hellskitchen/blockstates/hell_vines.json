@@ -1,0 +1,13 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+    },
+    "variants": {
+        "normal": {
+            "model": "block"
+        },
+        "inventory": {
+            "model": "hellskitchen:items/salt.png"
+        }
+    }
+}
